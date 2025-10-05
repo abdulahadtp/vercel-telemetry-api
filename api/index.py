@@ -18,7 +18,7 @@ app.add_middleware(
 # Load the telemetry data once when the server starts
 try:
     # The path goes from api/index.py up to the root to find the file
-    base_path = Path(__file__).parent.parent
+    base_path = Path(__file__).parent
     telemetry_df = pd.read_json(base_path / 'telemetry.json')
 except Exception:
     telemetry_df = None
